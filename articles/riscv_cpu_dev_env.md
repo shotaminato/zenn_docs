@@ -49,6 +49,7 @@ $ code
 ```
 Vscodeの画面が現れます。
 ![Vscode画面](/images/24031703.png)
+*Vscode画面例（Welcomeページが表示される場合もある）*
 
 サイドバーの「Extensions」ボタンをクリックし、下記拡張機能をインストールします。
 
@@ -59,6 +60,7 @@ Vscodeの画面が現れます。
 | Scala (Metals)          | .sbtファイルで定義されたワークスペースを取り込み、importの補完などを行ってくれます。  |
 
 ![Extensions](/images/24031705.png)
+*Extensionsの管理画面*
 
 
 # Vscode に docker をアタッチ
@@ -66,14 +68,16 @@ Vscodeの画面が現れます。
 拡張機能「Dev Containers」のインストールが完了すると、サイドバーに「リモートエクスプローラー」ボタンが表示されます。  
 また、画面左下に、下記のような緑のアイコンが表示されています。  
 ![Open a remote windowボタン](/images/24031701.png)
+*Open a remote windowボタン*
 
 これをクリックすると、コマンドパネルメニューが表示されます。  
 ![コマンドパネルメニュー](/images/24031702.png)
+*コマンドパネルメニュー*
 
 「Attach to Running Container (実行中のコンテナにアタッチ)」から、任意のコンテナにアタッチすることができます。  
 本通りに作業していれば、下記の通り「riscv/mycpu」というコンテナがあるはずです。そちらを選びます。
 ![Attach to Running Container](/images/24031704.png)
-
+*Attach to Running Container を選択*
 これでDockerとVscodeの接続は完了です。
 
 
@@ -81,6 +85,7 @@ Vscodeの画面が現れます。
 拡張機能「Metals」のインストールが完了すると、サイドバーにMetalsのMマークが表示されます。  
 クリックすると下記の画面が現れます。  
 ![Metals](/images/24031706.png)
+*Metalsの設定画面*
 
 前章の手順で、Vscodeを起動済みの「riscv/mycpu」にアタッチします。  
 本通りの手順であれば、起動済みのdockerコンテナには、sbtがインストールされているはずです。  
@@ -89,3 +94,4 @@ Vscodeの画面が現れます。
 Metalsのメニューから、「Import build」を選択すると、build.sbtの内容が読み込まれます。  
 これでMetalsの設定が完了です。下記のように、import や 変数が正しくシンタックスハイライトされていれば成功です。
 ![起動確認](/images/24031707.png)
+*Metals適用結果*
