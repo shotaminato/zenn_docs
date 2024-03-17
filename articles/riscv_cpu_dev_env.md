@@ -1,3 +1,11 @@
+---
+title: "RISC-V CPU自作備忘録（環境構築）"
+emoji: "🐙"
+type: "tech" # tech: 技術記事 / idea: アイデア
+topics: [riscv, chisel, ubuntu, docker]
+published: false
+---
+
 # はじめに
 RISC-Vの理解のため、「RISC-VとChiselで学ぶ はじめてのCPU自作 ――オープンソース命令セットによるカスタムCPU実装への第一歩」を参考にして、CPU自作に挑戦中です。  
 
