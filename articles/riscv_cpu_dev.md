@@ -3,7 +3,7 @@ title: "RISC-V CPU自作備忘録"
 emoji: "📚"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: [docker, ubuntu, riscv, chisel]
-published: false
+published: true
 ---
 
 # はじめに
