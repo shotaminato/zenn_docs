@@ -33,7 +33,7 @@ https://amzn.asia/d/aXO4PQ9
 # Dockerイメージ立ち上げ
 本の内容に従って、Dockerイメージを作成します。  
 注意点として、本に記載の内容は古いため、一部内容の修正が必要です。  
-修正内容はまとめてありますので、参考にしてください。  
+修正内容は以下のページにまとめてあります。参考にしてください。  
 @[card](https://zenn.dev/shotaminato/articles/riscv_cpu_dev)
 
 # Vscode インストール
@@ -63,7 +63,7 @@ Vscodeの画面が現れます。
 
 # Vscode に docker をアタッチ
 
-拡張機能「Dev Containers」のインストールが完了すると、サイドバーにリモートエクスプローラーが表示されます。  
+拡張機能「Dev Containers」のインストールが完了すると、サイドバーに「リモートエクスプローラー」ボタンが表示されます。  
 また、画面左下に、下記のような緑のアイコンが表示されています。  
 ![Open a remote windowボタン](/images/24031701.png)
 
@@ -78,7 +78,7 @@ Vscodeの画面が現れます。
 
 
 # Metal に build.sbt を import
-拡張機能「Metals」のインストールが完了すると、サイドバーにMetalsのマークが表示されます。  
+拡張機能「Metals」のインストールが完了すると、サイドバーにMetalsのMマークが表示されます。  
 クリックすると下記の画面が現れます。  
 ![Metals](/images/24031706.png)
 
