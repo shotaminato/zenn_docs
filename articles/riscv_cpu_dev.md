@@ -37,15 +37,15 @@ sudo apt install git
 Githubリポジトリの作成者の名前が本書の内容から変わっています。よってクローンもとのアドレスが異なります。
 （記載のアドレスでもクローンはできるが、Github上で発見できなくて困惑しました）  
 下記のリポジトリをクローンします。
-https://github.com/chipsalliance/chisel-template.git
+@[card](https://github.com/chipsalliance/chisel-template.git)
 
 ## 4-2 Dockerによる実行環境の構築
 ### 4-2-1 Dockerのインストール
 Ubuntuなので、下記のURLに従ってインストールしました。  
-https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository  
+@[card](https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository)
 「Installation methods」の「Install using the apt repository」を参考にしました。  
 また、下記のURLを参考にして、sudoなしでもdockerを扱えるように変更しました。  
-https://docs.docker.com/engine/install/linux-postinstall/  
+@[card](https://docs.docker.com/engine/install/linux-postinstall/)
 以下、インストールで実行したコマンドです。
 
 ```bash: インストールで実行したコマンド

@@ -4,6 +4,8 @@ RISC-Vの理解のため、「RISC-VとChiselで学ぶ はじめてのCPU自作 
 本記事は、Vscodeで本書の内容を学習するための、環境構築メモです。  
 sbtを使ったScalaの開発をVscodeで行う場合は、Metalsという拡張機能を使用すると良いです。
 
+本編は以下のページです。
+@[card](https://zenn.dev/shotaminato/articles/riscv_cpu_dev)
 
 ## 参考図書
 - RISC-VとChiselで学ぶ はじめてのCPU自作 ――オープンソース命令セットによるカスタムCPU実装への第一歩  
