@@ -10,7 +10,7 @@ published: true
 RISC-Vの理解のため「RISC-VとChiselで学ぶ はじめてのCPU自作 ――オープンソース命令セットによるカスタムCPU実装への第一歩」を参考にして、CPU自作に挑戦中です。  
 本記事は、本書からの学びや補足、変更点などの備忘録です。  
 
-環境構築編はこちら：
+環境構築編はこちら（VSCODEでの環境構築方法をまとめました）：
 @[card](https://zenn.dev/shotaminato/articles/riscv_cpu_dev_env)
 
 ## 参考図書
