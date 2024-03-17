@@ -18,7 +18,8 @@ VscodeでScalaを開発する場合は、Metalsという拡張機能を使用す
 ## 参考図書
 - RISC-VとChiselで学ぶ はじめてのCPU自作 ――オープンソース命令セットによるカスタムCPU実装への第一歩  
 
-https://amzn.asia/d/aXO4PQ9
+@[card](https://direct.gihyo.jp/view/item/000000001593?category_page_id=programming)
+![](/images/ref_book.jpg =300x)
 
 
 ## 著者の開発環境（参考）
