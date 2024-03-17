@@ -122,7 +122,7 @@ docker build . -t riscv/mycpu
 docker images
 ```
 
-# 第６章 ChiselTestによる命令フェッチテスト
+# 第6章 ChiselTestによる命令フェッチテスト
 
 ## 6.1 ChiselTestのインストール
 
@@ -162,6 +162,7 @@ https://www.rm48.net/post/risc-v%E3%81%A8chisel%E3%81%A7%E5%AD%A6%E3%81%B6-%E3%8
 
 私の環境では以下の結果となりました。参考書の内容とは異なり、0x34333231のサイクルは結果が出力されませんでした。  
 念の為、fetch.hex を変更して確認しましたが、やはり最終サイクルの結果は出力されませんでした。
+
 ```テスト結果
 pc_reg : 0x00000000
 inst   : 0x14131211
@@ -171,7 +172,40 @@ inst   : 0x24232221
 -------------------------------
 ```
 
-# 続き：作成中
+# 第8章 ChiselTestによる命令フェッチテスト
+本の内容そのままではテストが通りません。下記のエラーが出ます。  
+```bash
+[info] HexTest:
+[info] mycpu
+[info] - should work through hex *** FAILED ***
+[info]   firrtl.passes.PassExceptions: firrtl.passes.CheckInitialization$RefNotInitializedException:  @[Top.scala 13:24] : [module Top]  Reference memory is not fully initialized.
+[info]    : memory.io.dmem.addr <= VOID
+[info] firrtl.passes.CheckInitialization$RefNotInitializedException:  @[Top.scala 12:24] : [module Top]  Reference core is not fully initialized.
+[info]    : core.io.dmem.rdata <= VOID
+[info] firrtl.passes.PassException: 2 errors detected!
+[info]   ...
+[info] Run completed in 1 second, 557 milliseconds.
+[info] Total number of tests run: 1
+[info] Suites: completed 1, aborted 0
+[info] Tests: succeeded 0, failed 1, canceled 0, ignored 0, pending 0
+[info] *** 1 TEST FAILED ***
+```
+
+これは Top.scala 内の記述が漏れていることが原因です。  
+第8章では、coreとmemoryに新しいインターフェースを追加したたため、それらを接続してあげる必要があります。  
+具体的には、Top.scalaに以下の記述を追加します。  
+
+```scala
+class Top extends Module {
+    ...
+    core.io.imem <> memory.io.imem
+    core.io.dmem <> memory.io.dmem // 追加
+    ...
+}
+```
+（初学者ですが、自分でコードを解釈して、修正箇所と修正方法を見つけることができました。嬉しかったです笑）
+
+
 
 # メモ
 ## Chisel 記号の意味
