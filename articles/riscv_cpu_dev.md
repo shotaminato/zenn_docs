@@ -163,7 +163,7 @@ https://www.rm48.net/post/risc-v%E3%81%A8chisel%E3%81%A7%E5%AD%A6%E3%81%B6-%E3%8
 私の環境では以下の結果となりました。参考書の内容とは異なり、0x34333231のサイクルは結果が出力されませんでした。  
 念の為、fetch.hex を変更して確認しましたが、やはり最終サイクルの結果は出力されませんでした。
 
-```テスト結果
+```bash:テスト結果
 pc_reg : 0x00000000
 inst   : 0x14131211
 -------------------------------
@@ -176,7 +176,7 @@ inst   : 0x24232221
 ## 8-3 テストの実行
 
 本の内容そのままではテストが通りません。下記のエラーが出ます。  
-```bash
+```bash:エラー内容
 [info] HexTest:
 [info] mycpu
 [info] - should work through hex *** FAILED ***
@@ -197,7 +197,7 @@ inst   : 0x24232221
 第8章では、coreとmemoryに新しいインターフェースを追加したたため、それらを接続してあげる必要があります。  
 具体的には、Top.scalaに以下の記述を追加します。  
 
-```scala
+```scala:修正内容
 class Top extends Module {
     ...
     core.io.imem <> memory.io.imem
