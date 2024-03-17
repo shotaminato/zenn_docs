@@ -1,5 +1,5 @@
 ---
-title: "RISC-V CPU自作備忘録"
+title: "RISC-V CPU自作備忘録（学習編）"
 emoji: "📚"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: [docker, ubuntu, riscv, chisel]
@@ -9,6 +9,9 @@ published: true
 # はじめに
 RISC-Vの理解のため「RISC-VとChiselで学ぶ はじめてのCPU自作 ――オープンソース命令セットによるカスタムCPU実装への第一歩」を参考にして、CPU自作に挑戦中です。  
 本記事は、本書からの学びや補足、変更点などの備忘録です。  
+
+環境構築編はこちら：
+@[card](https://zenn.dev/shotaminato/articles/riscv_cpu_dev_env)
 
 ## 参考図書
 - RISC-VとChiselで学ぶ はじめてのCPU自作 ――オープンソース命令セットによるカスタムCPU実装への第一歩  
