@@ -208,6 +208,34 @@ class Top extends Module {
 ```
 （初学者ですが、自分でコードを解釈して、修正箇所と修正方法を見つけることができました。嬉しかったです笑）
 
+
+
+# 第9章 SW命令の実装
+
+## 9-2 Chiselの実装
+「9-2-4 ④メモリのデータ書き込み実装」では、下記の記載がありますが、これはUInt型の方推論を利用した記法であるようです。
+
+```bash: Memory.scala
+    when(io.dmem.wen) {
+        mem(io.dmem.addr)       := io.dmem.wdata( 7, 0)
+        mem(io.dmem.addr + 1.U) := io.dmem.wdata(15, 8)
+        mem(io.dmem.addr + 2.U) := io.dmem.wdata(15, 8)
+        mem(io.dmem.addr + 3.U) := io.dmem.wdata(15, 8)
+    }
+```
+
+当たり前ですが、あえて型を明記してもビルドは通ります。私としてはこっちのほうが好みです。（初学者というのもあり、、、）
+
+```bash: Memory.scala
+    when(io.dmem.wen) {
+        mem(io.dmem.addr)                   := io.dmem.wdata( 7, 0)
+        mem(io.dmem.addr + 1.U(WORD_LEN.W)) := io.dmem.wdata(15, 8)
+        mem(io.dmem.addr + 2.U(WORD_LEN.W)) := io.dmem.wdata(15, 8)
+        mem(io.dmem.addr + 3.U(WORD_LEN.W)) := io.dmem.wdata(15, 8)
+    }
+```
+
+
 # 続きを作成中（20230318）
 
 # メモ
